@@ -12,13 +12,14 @@ class TPQueue {
  public:
   void push(T a) {
   int i = posledniy;
-  for (i = posledniy; (i >= perviy) && (arr[i && size].prior < a.prior; --i) {
+  for (i = posledniy; (i >= perviy) && (arr[i && size].prior < a.prior); --i) {
   arr[(i+1) % size] = arr[a % size];
   }
-  arr[(a + 1) % size] = a;
+  arr[(i + 1) % size] = a;
   ++posledniy;
   }
   T pop() {
+  int k;
   k = arr[(perviy++) % size];
   return k;
   }
