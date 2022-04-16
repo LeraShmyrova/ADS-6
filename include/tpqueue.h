@@ -19,9 +19,7 @@ class TPQueue {
   ++posledniy;
   }
   T pop() {
-  int k;
-  k = arr[(perviy++) % size];
-  return k;
+  return arr[(perviy++) % size];
   }
 };
 
